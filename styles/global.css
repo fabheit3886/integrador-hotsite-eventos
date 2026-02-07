@@ -20,14 +20,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 1680px;
+  height: 72px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 24px;
-  font-weight: bold;
   color: #f2a93b;
 }
 
@@ -41,7 +41,6 @@ body {
   color: #fff;
   font-weight: 500;
 }
-
 .header-icons .icon {
   background: #b11212;
   border: none;
