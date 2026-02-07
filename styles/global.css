@@ -58,13 +58,15 @@ body {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 40px;
 }
 
 .footer-brand img {
-  width: 80px;
+  width: 254px;
+  height: 180px;
 }
 
 .footer-brand h2 {
