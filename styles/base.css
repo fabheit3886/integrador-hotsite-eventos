@@ -1,0 +1,43 @@
+/*RESET*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+:root {
+  --container-max: 1440px;
+  --container-padding: clamp(24px, 5vw, 80px);
+
+  --header-height: clamp(88px, 10vh, 112px);
+}
+:root {
+  --fs-xs: clamp(12px, 0.75vw, 14px);
+  --fs-sm: clamp(14px, 0.9vw, 16px);
+  --fs-md: clamp(16px, 1vw, 18px);
+  --fs-lg: clamp(20px, 1.5vw, 28px);
+  --fs-xl: clamp(32px, 3vw, 56px);
+}
+h1 { font-size: var(--fs-xl); }
+p  { font-size: var(--fs-md); }

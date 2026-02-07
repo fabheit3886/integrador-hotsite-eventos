@@ -7,18 +7,62 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 
 <body>
     <div id="header"></div>
+<main>
+  <section class="hero">
 
-    <main>
-        <!-- conteúdo do hero -->
-    </main>
+    <!-- Fundo -->
+    <div class="bg-vermelho"></div>
+    <img src="assets/images/bg-hero-show.jpg" alt="Público em festival" class="hero-bg">
+    <div class="hero-overlay"></div>
 
+    <!-- Conteúdo -->
+    <div class="hero-container">
+      <h1 class="hero-title">
+        CAJUFESTIVAL <br>
+        <span class="highlight">EM NATAL</span>
+      </h1>
+
+      <div class="hero-actions">
+        <a href="#ingressos" class="btn btn-primary">VER INGRESSOS</a>
+
+        <a href="#programacao" class="btn btn-secondary">
+          <img src="assets/images/programacao.svg" alt="" class="icon">
+          Programação
+        </a>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="hero-timer">
+      <div class="timer-cards">
+        <div class="timer-card">
+          <strong>14</strong>
+          <span>dias</span>
+        </div>
+        <div class="timer-card">
+          <strong>23</strong>
+          <span>horas</span>
+        </div>
+        <div class="timer-card">
+          <strong>48</strong>
+          <span>minutos</span>
+        </div>
+      </div>
+      <div class="timer-base"></div>
+    </div>
+
+  </section>
+<div class="sqre">
+</div>
+</main>
+    
     <div id="footer"></div>
-
     <script src="/scripts/components.js"></script>
 </body>
 
