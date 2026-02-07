@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -10,99 +11,203 @@ body {
   color: #ffffff;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 .header {
-  background: #000;
-  padding: 20px 40px;
-}
-
-.header-container {
   display: flex;
-  align-items: center;
+  padding: 23px 120px;
   justify-content: space-between;
-  width: 1680px;
-  height: 72px;
-}
-
-.logo {
-  display: flex;
   align-items: center;
-  gap: 10px;
-  color: #f2a93b;
 }
 
-.logo img {
-  width: 40px;
+.nav {
+  display: flex;
+  gap: 69px;
 }
 
 .nav a {
-  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-}
-.header-icons .icon {
-  background: #b11212;
-  border: none;
-  color: #fff;
-  margin-left: 10px;
-  padding: 8px 10px;
-  border-radius: 50%;
-  cursor: pointer;
+  color: aliceblue;
 }
 
-/* FOOTER */
-.footer {
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.header-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 24px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 293px;
+}
+
+.header-logo img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-icons,
+.user-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: #BA2626;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
   background: #000;
-  padding: 60px 40px 20px;
+  color: #fff;
 }
 
 .footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 80px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  gap: 80px;
+}
+
+/* BRAND */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 180px;
 }
 
 .footer-brand img {
-  width: 254px;
-  height: 180px;
+  max-width: 180px;
+  height: auto;
 }
 
-.footer-brand h2 {
-  color: #f2a93b;
-  margin: 10px 0;
+/* SOCIAIS */
+.social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .social a {
-  margin-right: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
 }
-.footer-column{
-    flex-wrap: nowrap;
+
+.social a img {
+  width: 24px;
+  height: 24px;
 }
+
+/* LINKS */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 48px;
+  width: 100%;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
 .footer-column h4 {
-  margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .footer-column a,
 .footer-column p {
+  font-size: 13px;
+  color: #cfcfcf;
+  text-decoration: none;
   display: block;
   margin-bottom: 8px;
-  color: #ccc;
-  font-size: 14px;
-  text-decoration: none;
 }
 
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* BOTTOM */
 .footer-bottom {
+  border-top: 1px solid #222;
+  padding: 24px 16px;
   text-align: center;
-  margin-top: 40px;
-  font-size: 13px;
+  font-size: 12px;
   color: #888;
+}
+
+:root {
+  --header-height: 112px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* 1440x900 */
+@media (max-width: 1440px) {
+
+  .header-container,
+  .footer-container {
+    padding: 56px 64px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .header-container {
+    padding: 20px 24px;
+  }
+
+  .footer-container {
+    padding: 48px 24px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
