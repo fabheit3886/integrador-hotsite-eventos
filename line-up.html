@@ -13,7 +13,8 @@
 
 <body>
     <div id="header"></div>
-    <main class="lineup-container">
+    <section class="lineup-scale">
+        <div class="lineup-container">
 
         <div class="slider">
 
@@ -54,8 +55,7 @@
 
 
                     <div class="card-artista">
-                        <img src="/assets/artistas/alee-fundo.png" alt="" class="artista-img moldura" aria-hidden="true">
-                        <img src="/assets/artistas/alee-fundo.png" alt="" class="artista-img grade" aria-hidden="true">
+                        <img src="/assets/artistas/moldura.svg" alt="" class="artista-img moldura" aria-hidden="true">
                         <img src="/assets/artistas/alee-fundo.png" alt="" class="artista-img back" aria-hidden="true">
 
                         <img src="/assets/artistas/alee.png" alt="Alee" class="artista-img front">
@@ -70,55 +70,70 @@
             </div>
             </section>
             <!--SLIDE 2-->
-            <section class="slide active">
-                <div class="lineup-info">
-                    <h1 class="titulo">
-                        HEADLINERS DO <span>PALCO DUNAS</span>
-                    </h1>
-                    <div class="card-wrapper">
-                        <div class="card-data">
-                            <div class="data">
-                                <span class="mes">FEVEREIRO</span>
-                                <span class="dia">23</span>
-                                <span class="hora">14:00 - 16:00</span>
+                <section class="lineup-scale">
+        <div class="lineup-container">
+
+        <div class="slider">
+
+            <div class="slides">
+
+                <!-- SLIDE 1 -->
+                <section class="slide active">
+                    <div class="lineup-info">
+                        <h1 class="titulo">
+                            HEADLINERS DO <span>PALCO DUNAS</span>
+                        </h1>
+                        <div class="card-wrapper">
+                            <div class="card-data">
+                                <div class="data">
+                                    <span class="mes">FEVEREIRO</span>
+                                    <span class="dia">23</span>
+                                    <span class="hora">14:00 - 16:00</span>
+                                </div>
+                                <div class="divider-card"></div>
+                                <div class="local">
+                                    <h2>ARENA DAS <strong>DUNAS</strong></h2>
+                                </div>
                             </div>
-                            <div class="divider-card"></div>
-                            <div class="local">
-                                <h2>ARENA DAS <strong>DUNAS</strong></h2>
+                            <div class="acoes">
+                                <a href="https://maps.google.com/?q=Arena+das+Dunas" target="_blank" rel="noopener"
+                                    class="btn-mapa">
+                                    VER MAPA
+                                </a>
+                                <div class="paginacao">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
                             </div>
+
                         </div>
-                        <div class="acoes">
-                            <a href="https://maps.google.com/?q=Arena+das+Dunas" target="_blank" rel="noopener"
-                                class="btn-mapa">
-                                VER MAPA
-                            </a>
-                            <div class="paginacao">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                    </div>
+
+
+                    <div class="card-artista">
+                        <img src="/assets/artistas/moldura.svg" alt="" class="artista-img moldura" aria-hidden="true">
+                        <img src="/assets/artistas/alee-fundo.png" alt="" class="artista-img back" aria-hidden="true">
+
+                        <img src="/assets/artistas/alee.png" alt="Alee" class="artista-img front">
+
+                        <div class="badge-headliner">
+                            <span>Headliner</span>
+                            <strong>ALEE</strong>
                         </div>
 
                     </div>
-                </div>
 
-
-                <div class="card-artista">
-                    <img src="/assets/artistas/alee.png" alt="Alee">
-                    <div class="badge-headliner">
-                        <span>Headliner</span>
-                        <strong>ALEE</strong>
-                    </div>
-                </div>
+            </div>
             </section>
-
         </div>
 
 
         </div>
 
-    </main>
+    </div>
 
+    </section>
     <div id="footer"></div>
     <script src="/scripts/components.js"></script>
     <script src="/line-up/slider-lineup.js"></script>

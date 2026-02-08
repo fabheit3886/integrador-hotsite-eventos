@@ -2,69 +2,225 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CajuFestival - Página inicial</title>
-    <link rel="stylesheet" href="/styles/global.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="line-up/line-up.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CajuFestival - Página inicial</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="line-up/line-up.html">
+    <link rel="stylesheet" href="line-up/line-up.css">
+
 </head>
 
 <body>
-    <div id="header"></div>
-<main>
-  <section class="hero">
+  <div id="header"></div>
+  <main>
+    <section class="hero">
 
-    <!-- Fundo -->
-    <div class="bg-vermelho"></div>
-    <img src="assets/images/bg-hero-show.jpg" alt="Público em festival" class="hero-bg">
-    <div class="hero-overlay"></div>
+      <!-- Fundo -->
+      <div class="bg-vermelho"></div>
+      <img src="assets/images/bg-hero-show.jpg" alt="Público em festival" class="hero-bg">
+      <div class="hero-overlay"></div>
 
-    <!-- Conteúdo -->
-    <div class="hero-container">
-      <h1 class="hero-title">
-        CAJUFESTIVAL <br>
-        <span class="highlight">EM NATAL</span>
-      </h1>
+      <!-- Conteúdo -->
+      <div class="hero-container">
+        <h1 class="hero-title">
+          CAJUFESTIVAL <br>
+          <span class="highlight">EM NATAL</span>
+        </h1>
 
-      <div class="hero-actions">
-        <a href="#ingressos" class="btn btn-primary">VER INGRESSOS</a>
+        <div class="hero-actions">
+          <a href="#ingressos" class="btn btn-primary">VER INGRESSOS</a>
 
-        <a href="#programacao" class="btn btn-secondary">
-          <img src="assets/images/programacao.svg" alt="" class="icon">
-          Programação
-        </a>
+          <a href="#programacao" class="btn btn-secondary">
+            <img src="assets/images/programacao.svg" alt="" class="icon">
+            Programação
+          </a>
+        </div>
+      </div>
+
+      <!-- Timer -->
+      <div class="hero-timer">
+        <div class="timer-cards">
+          <div class="timer-card">
+            <strong>14</strong>
+            <span>dias</span>
+          </div>
+          <div class="timer-card">
+            <strong>23</strong>
+            <span>horas</span>
+          </div>
+          <div class="timer-card">
+            <strong>48</strong>
+            <span>minutos</span>
+          </div>
+        </div>
+        <div class="timer-base"></div>
+      </div>
+
+    </section>
+    <div class="sqre">
+    </div>
+  </main>
+  <section class="lineup-scale">
+  <div class="lineup-container">
+
+    <div class="slider">
+      <div class="slides">
+
+        <!-- SLIDE 1 -->
+        <section class="slide">
+          <div class="lineup-info">
+            <h1 class="titulo">
+              HEADLINERS DO <span>PALCO DUNAS</span>
+            </h1>
+
+            <div class="card-wrapper">
+              <div class="card-data">
+                <div class="data">
+                  <span class="mes">FEVEREIRO</span>
+                  <span class="dia">23</span>
+                  <span class="hora">14:00 - 16:00</span>
+                </div>
+
+                <div class="divider-card"></div>
+
+                <div class="local">
+                  <h2>ARENA DAS <strong>DUNAS</strong></h2>
+                </div>
+              </div>
+
+              <div class="acoes">
+                <a
+                  href="https://maps.google.com/?q=Arena+das+Dunas"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-mapa"
+                >
+                  VER MAPA
+                </a>
+
+                <div class="paginacao">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-artista">
+            <img
+              src="/assets/artistas/moldura.svg"
+              alt=""
+              class="artista-img moldura"
+              aria-hidden="true"
+            >
+            <img
+              src="/assets/artistas/alee-fundo.png"
+              alt=""
+              class="artista-img back"
+              aria-hidden="true"
+            >
+            <img
+              src="/assets/artistas/alee.png"
+              alt="Alee"
+              class="artista-img front"
+            >
+
+            <div class="badge-headliner">
+              <span>Headliner</span>
+              <strong>ALEE</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 2 -->
+        <section class="slide">
+          <div class="lineup-info">
+            <h1 class="titulo">
+              HEADLINERS DO <span>PALCO DUNAS</span>
+            </h1>
+
+            <div class="card-wrapper">
+              <div class="card-data">
+                <div class="data">
+                  <span class="mes">FEVEREIRO</span>
+                  <span class="dia">24</span>
+                  <span class="hora">18:00 - 20:00</span>
+                </div>
+
+                <div class="divider-card"></div>
+
+                <div class="local">
+                  <h2>ARENA DAS <strong>DUNAS</strong></h2>
+                </div>
+              </div>
+
+              <div class="acoes">
+                <a
+                  href="https://maps.google.com/?q=Arena+das+Dunas"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-mapa"
+                >
+                  VER MAPA
+                </a>
+
+                <div class="paginacao">
+                  <span class="dot"></span>
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-artista">
+            <img
+              src="/assets/artistas/moldura.svg"
+              alt=""
+              class="artista-img moldura"
+              aria-hidden="true"
+            >
+            <img
+              src="/assets/artistas/artista2-fundo.png"
+              alt=""
+              class="artista-img back"
+              aria-hidden="true"
+            >
+            <img
+              src="/assets/artistas/artista2.png"
+              alt="Artista 2"
+              class="artista-img front"
+            >
+
+            <div class="badge-headliner">
+              <span>Headliner</span>
+              <strong>ARTISTA 2</strong>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
 
-    <!-- Timer -->
-    <div class="hero-timer">
-      <div class="timer-cards">
-        <div class="timer-card">
-          <strong>14</strong>
-          <span>dias</span>
-        </div>
-        <div class="timer-card">
-          <strong>23</strong>
-          <span>horas</span>
-        </div>
-        <div class="timer-card">
-          <strong>48</strong>
-          <span>minutos</span>
-        </div>
-      </div>
-      <div class="timer-base"></div>
-    </div>
+  </div>
+</section>
+
+  </div>
+
+
+  </div>
+
+  </div>
 
   </section>
-<div class="sqre">
-</div>
-</main>
-    
-    <div id="footer"></div>
-    <script src="/scripts/components.js"></script>
+  <div id="footer"></div>
+  <script src="/scripts/components.js"></script>
+  <script src="/line-up/slider-lineup.js"></script>
 </body>
 
 </html>
