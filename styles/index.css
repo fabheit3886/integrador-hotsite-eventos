@@ -23,6 +23,7 @@ main {
     height: var(--hero-height);
     overflow: hidden;
     color: #fff;
+  padding-top: var(--header-height);
 }
 
 /* =========================
