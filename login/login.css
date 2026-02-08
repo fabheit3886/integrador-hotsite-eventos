@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+
+}
+
+body {
+  color: white;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("../assets/login/pexels-jonathan-borba-3563173-scaled 1.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #212121;
+}
+
+
+.topo {
+  height: 90px;
+  padding: 16px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.logo-header {
+  height: 60px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 36px;
+}
+
+.navegacao a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.icones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icones img {
+  width: 26px;
+  height: 26px;
+}
+
+.divider {
+  width: 2px;
+  height: 24px;
+  background: #BA2626;
+  margin: 0 12px;
+}
+
+/* CONTEÚDO */
+
+.container-principal {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-login {
+  width: 520px;
+  height: 600px;
+  max-width: 92vw;
+  background: #26292C;
+  border-radius: 20px;
+  padding: 24px 26px;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.logo {
+  width: 240px;
+  height: 240px;
+  display: block;
+  margin-bottom: -50px;
+  margin-top:  -50px;
+}
+
+.linha {
+  height: 1px;
+  background: white;
+  margin: 0 0 20px 0;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 22px;
+  color: #F1AB4E;
+  margin-bottom: 28px;
+}
+
+
+.google {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #810000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.google-icone {
+  width: 18px;
+  height: 18px;
+}
+
+
+.form-login {
+  margin-top: 0;
+}
+
+.campo {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+
+  margin: 30px 0;
+  border: 1px solid white;
+  border-radius: 999px;
+  background: #5F656D;
+  margin-bottom: 0px;
+}
+
+.campo-icone {
+  width: 12px;
+  height: 12px;
+}
+
+.campo input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+}
+
+.campo input::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+.esqueceu {
+  display: inline-block;
+  margin: 4px 16px 18px;
+  font-size: 12px;
+  color: #A7ACB4;
+  text-decoration: underline;
+  margin-bottom: -10px;
+}
+
+.btn-continuar {
+  width: 240px;
+  max-width: 100%;
+  height: 64px;
+  border: none;
+  border-radius: 8px;
+  background: #F1AB4E;
+  color: #fff;
+  cursor: pointer;
+
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.cadastro {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+}
+
+.cadastro a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 760px) {
+  .navegacao {
+    display: none;
+  }
+
+  .topo {
+    padding: 12px 20px;
+    height: 80px;
+  }
+
+  .logo-header {
+    height: 52px;
+  }
+
+  .card-login {
+    width: 92vw;
+    height: auto;
+    padding: 22px;
+  }
+
+  .logo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn-continuar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .titulo {
+    font-size: 13px;
+  }
+}

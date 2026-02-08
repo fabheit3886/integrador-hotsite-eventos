@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotsite - cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container-topo">
+      <img class="logo-header" src="../assets/icons/logo-header.svg" alt="Logo Header">
+    </div>
+
+    <nav class="navegacao">
+      <a href="#lineup">Line-up</a>
+      <a href="#informacoes">Informações</a>
+      <a href="#ingressos">Ingressos</a>
+      <a href="#quemsomos">Quem somos?</a>
+    </nav>
+
+    <div class="icones">
+      <img class="x" src="../assets/images/social-x.svg" alt="X">
+      <img class="spotify" src="../assets/images/social-spotify.svg" alt="Spotify">
+      <img class="instagram" src="../assets/images/social-ig.svg" alt="Instagram">
+      <img class="youtube" src="../assets/images/social-yt.svg" alt="YouTube">
+      <span class="divider" aria-hidden="true"></span>
+      <img class="carrinho" src="../assets/images/Carrinho.svg" alt="Carrinho">
+      <img class="login" src="../assets/images/login.svg" alt="Login">
+    </div>
+  </header>
+
+  <main class="container-principal">
+    <section class="card-login">
+      <div class="brand">
+        <img class="logo" src="../assets/icons/logo-header.svg" alt="Logo Caju">
+      </div>
+
+      <hr class="linha">
+
+      <h2 class="titulo">ACESSE SUA EXPERIÊNCIA CAJUFESTIVAL</h2>
+
+      <form class="form-login" action="#" method="post">
+
+        <label class="campo">
+          <img class="campo-icone" src="../assets/cadastro/icon-park-outline_edit-name.png" alt="">
+          <input type="text" placeholder="Nome completo">
+        </label>
+
+        <label class="campo">
+          <img class="campo-icone" src="../assets/login/mail.png" alt="">
+          <input type="email" placeholder="E-mail">
+        </label>
+
+        <label class="campo">
+          <img class="campo-icone" src="../assets/login/key.png" alt="">
+          <input type="password" placeholder="Senha">
+        </label>
+
+        <div class="trio">
+          <label class="mini">
+            <img class="mini-icone" src="../assets/cadastro/Group.png" alt="">
+            <input type="text" placeholder="Dia">
+          </label>
+
+          <label class="mini">
+            <img class="mini-icone" src="../assets/cadastro/Group.png" alt="">
+            <input type="text" placeholder="Mês">
+          </label>
+
+          <label class="mini">
+            <img class="mini-icone" src="../assets/cadastro/Group.png" alt="">
+            <input type="text" placeholder="Ano">
+          </label>
+        </div>
+
+        <button class="btn-continuar" type="submit">CONTINUAR</button>
+
+        <p class="cadastro">
+          Já tem uma conta? <a href="../login/login.html">Entrar</a>
+        </p>
+      </form>
+    </section>
+    <p class="termos">
+          Ao prosseguir, você concorda com os<br>
+          <span class="tracejado">Termos de uso</span> 
+          e a 
+          <span class="tracejado">Política de privacidade </span>
+          do Cajufestival
+    </p>
+  </main>
+</body>
+</html>
