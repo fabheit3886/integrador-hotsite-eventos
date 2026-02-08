@@ -199,6 +199,17 @@ body {
     height: 100%;
     margin-right: 24px;
 }
+.card-data,
+.card-artista,
+.artista-img.front {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-data:hover,
+.card-artista:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.45);
+}
 
 .artista-img {
     position: absolute;
