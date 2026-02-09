@@ -9,7 +9,8 @@
 ========================= */
 main {
     width: 100%;
-    height: 900px;
+    height: 980px;
+    background-color: #212121;
 }
 
 /* =========================
@@ -210,7 +211,7 @@ main {
 
 .timer-card span {
     margin-top: 6px;
-    font-size: 14px;
+    font-size: 16px;
     color: #cfcfcf;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -222,7 +223,7 @@ main {
 }
 
 .lineup-container {
-    background: #1c1c1c;
+    background: #212121;
     color: #fff;
     padding: 48px;
     overflow: hidden;
@@ -393,32 +394,6 @@ main {
 }
 
 /* ===== ARTISTA ===== */
-.card-artista {
-    position: relative;
-    width: 460px;
-    height: 100%;
-    margin-right: 24px;
-}
-
-.artista-img {
-    position: absolute;
-    inset: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.artista-img.back {
-    transform: translateX(28px);
-    z-index: 1;
-    opacity: 0.95;
-}
-
-/* imagem principal */
-.artista-img.front {
-    z-index: 2;
-}
 
 /* badge */
 .badge-headliner {
@@ -487,4 +462,206 @@ main {
 
 .dot.active {
     opacity: 1;
+}
+
+/* =========================
+   AJUSTES GERAIS
+========================= */
+main {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+height: 880px;
+width: 100%;
+  overflow: hidden;
+  color: #fff;
+  padding-top: var(--header-height);
+  padding-bottom: 220px; /* espaço real pro timer */
+}
+
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 6rem var(--container-padding) 3rem;
+}
+
+/* =========================
+   TIMER
+========================= */
+
+.hero-timer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  width: min(90%, 800px);
+  height: 96px;
+  background: #2f3439;
+  border-radius: 16px 16px;
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-cards {
+  display: flex;
+  gap: 32px;
+}
+
+.timer-card {
+  width: 125px;
+  height: 125px;
+  background: #3a3f44;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   LINEUP
+========================= */
+
+.lineup-scale {
+  background: #212121;
+padding: 0px 100px;}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .timer-card {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 100px;
+  }
+
+  .hero-container {
+    padding: 4rem 24px 2rem;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-timer {
+    bottom: -60px;
+  }
+
+  .timer-cards {
+    gap: 16px;
+  }
+
+  .timer-card {
+    width: 110px;
+    height: 110px;
+  }
+
+  .lineup-scale {
+    padding-top: 120px;
+  }
+}
+/* ===== CARD DO ARTISTA ===== */
+.card-artista {
+  position: relative;
+  width: 460px;
+  height: 100%;
+}
+
+/* BASE – ambas iguais */
+.artista-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* imagem de trás (efeito) */
+.artista-img.back {
+  transform: translateX(28px); /* só desloca */
+  z-index: 1;
+  opacity: 0.95;
+}
+
+/* imagem da frente */
+.artista-img.front {
+  z-index: 2;
+}
+
+/* badge */
+.badge-headliner {
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  background: #c62828;
+  padding: 12px 20px;
+  color: #fff;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+
+/* ===== IMAGENS ===== */
+.artista-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  object-fit: contain;
+}
+
+.artista-img.back {
+  transform: translateX(-50%) translateX(28px);
+  opacity: 0.95;
+  z-index: 1;
+}
+
+.artista-img.front {
+  z-index: 2;
+}
+
+/* ===== BADGE ===== */
+.badge-headliner {
+  position: absolute;
+  bottom: 40px;
+  right: 32px;
+  z-index: 5;
 }
