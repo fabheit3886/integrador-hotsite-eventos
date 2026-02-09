@@ -299,3 +299,107 @@ body {
 .dot.active {
     opacity: 1;
 }
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+    .lineup-container {
+      padding: 48px 32px;
+    }
+  
+    .titulo {
+      font-size: 42px;
+    }
+  
+    .slide {
+      flex-direction: column;
+      gap: 40px;
+      min-height: auto;
+    }
+  
+    .lineup-info {
+      max-width: 100%;
+    }
+  
+    .card-data {
+      width: 100%;
+      max-width: 520px;
+    }
+  
+    .card-artista {
+      width: 100%;
+      max-width: 420px;
+      height: 480px;
+      margin: 0 auto;
+    }
+  
+    .badge-headliner {
+      right: 20px;
+      bottom: 60px;
+    }
+  
+  }
+  
+  
+  /* ===== CELULAR ===== */
+  @media (max-width: 600px) {
+  
+    .lineup-container {
+      padding: 32px 20px;
+    }
+  
+    .titulo {
+      font-size: 28px;
+    }
+  
+    .slide {
+      flex-direction: column;
+      gap: 32px;
+    }
+  
+    .card-data {
+      width: 100%;
+      height: auto;
+      padding: 16px;
+      gap: 12px;
+    }
+  
+    .card-data .dia {
+      font-size: 48px;
+    }
+  
+    .card-data h2 {
+      font-size: 32px;
+    }
+  
+    .card-data h2 strong {
+      font-size: 40px;
+    }
+  
+    .divider-card {
+      height: 80px;
+    }
+  
+    .card-artista {
+      width: 100%;
+      height: 380px;
+    }
+  
+    .badge-headliner {
+      right: 12px;
+      bottom: 40px;
+      padding: 8px 14px;
+    }
+  
+    .badge-headliner strong {
+      font-size: 16px;
+    }
+  
+    .btn-mapa {
+      width: 100%;
+      height: 56px;
+      font-size: 16px;
+    }
+  
+  }
+  

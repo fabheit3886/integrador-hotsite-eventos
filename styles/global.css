@@ -147,6 +147,80 @@ h1{
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
+@media (max-width: 1440px) {
+  .header {
+    height: 120px;
+  }
+
+  .header-container {
+    padding: 0 48px;
+  }
+
+  .nav {
+    gap: 48px;
+  }
+
+  .header-logo img {
+    height: 56px;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    height: 100px;
+  }
+
+  .header-container {
+    padding: 0 32px;
+  }
+
+  .nav {
+    gap: 32px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .header-logo img {
+    height: 48px;
+  }
+
+  .icon-slot img {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+
+  .header-container {
+    padding: 0 20px;
+  }
+
+  /* esconde navegação */
+  .nav {
+    display: none;
+  }
+
+  .header-logo img {
+    height: 42px;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+
+  .icon-slot img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
 
 
 

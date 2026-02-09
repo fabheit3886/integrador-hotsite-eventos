@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CajuFestival - Compra</title>
+  <link rel="stylesheet" href="compra/compra.css">
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+  <div id="header">
+  </div>
+  <section class="checkout">
+    <div class="checkout-container">
+
+      <!-- COLUNA ESQUERDA -->
+      <div class="checkout-left">
+        <h1 class="checkout-title">
+          SEU LUGAR NO <br>
+          <span>CAJUFESTIVAL</span>
+        </h1>
+
+        <p class="checkout-subtitle">
+          Falta pouco para você viver essa experiência
+        </p>
+
+        <h2 class="checkout-section-title">Itens do carrinho</h2>
+
+        <!-- ITEM -->
+        <div class="checkout-item">
+          <div class="checkout-item-info">
+            <h3>PISTA PREMIUM</h3>
+            <p>12, 13 e 14 de setembro</p>
+            <small>Natal - RN</small>
+
+            <div class="checkout-qty">
+              <button class="qty-minus">-</button>
+              <span class="qty-value">2</span>
+              <button class="qty-plus">+</button>
+            </div>
+            
+          </div>
+
+          <div class="checkout-item-price" data-price="400">
+            R$ 400,00
+          </div>
+          
+
+          <button class="checkout-remove">🗑</button>
+        </div>
+
+        <!-- ALERTA -->
+        <div class="checkout-alert">
+          <strong>Poucos ingressos disponíveis!</strong>
+          <span>Garanta antes que acabem!</span>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <aside class="checkout-summary">
+        <h3>Resumo da sua experiência</h3>
+
+        <div class="summary-line">
+          <span>PISTA PREMIUM</span>
+          <strong id="summary-unit">R$ 400,00</strong>
+        </div>
+        
+        <p class="summary-date">
+          12, 13 e 14 de setembro <br>
+          Quantidade: <span id="summary-qty">2</span>
+        </p>
+        
+        <div class="summary-line">
+          <span>SUBTOTAL</span>
+          <strong id="summary-subtotal">R$ 1600,00</strong>
+        </div>
+        
+        <div class="summary-line small">
+          <span>Taxa de conveniência</span>
+          <span id="summary-fee">R$ 18,00</span>
+        </div>
+        
+        <div class="summary-total">
+          <span>TOTAL</span>
+          <strong id="summary-total">R$ 1618,00</strong>
+        </div>
+        
+        <p class="summary-note">
+          Você está garantindo presença no melhor festival do nordeste!
+        </p>
+
+        <button class="checkout-btn">
+          FINALIZAR COMPRA
+        </button>
+
+        <div class="checkout-security">
+          Compra segura • 
+          <img src="assets/icons/lock.svg" alt="">
+          <img src="assets/icons/protect.svg" alt="">
+          <img src="assets/icons/cartao.svg" alt="">        
+        </div>
+      </aside>
+
+    </div>
+  </section>
+  <script src="compra/compra.js"></script>
+
+  <script src="scripts/components.js"></script>
+  <div id="footer"></div>
+  <script>
+    const qtyValue = document.querySelector('.qty-value');
+    const btnPlus = document.querySelector('.qty-plus');
+    const btnMinus = document.querySelector('.qty-minus');
+    const btnRemove = document.querySelector('.checkout-remove');
+  
+    const priceEl = document.querySelector('.checkout-item-price');
+    const unitPrice = Number(priceEl.dataset.price);
+  
+    const summaryQty = document.getElementById('summary-qty');
+    const summarySubtotal = document.getElementById('summary-subtotal');
+    const summaryFee = document.getElementById('summary-fee');
+    const summaryTotal = document.getElementById('summary-total');
+  
+    const FEE = 18;
+  
+    function formatBR(value) {
+      return value.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
+    }
+  
+    function updateTotals() {
+      const qty = Number(qtyValue.textContent);
+      const subtotal = unitPrice * qty;
+      const total = subtotal + FEE;
+  
+      summaryQty.textContent = qty;
+      summarySubtotal.textContent = formatBR(subtotal);
+      summaryFee.textContent = formatBR(FEE);
+      summaryTotal.textContent = formatBR(total);
+    }
+  
+    btnPlus.addEventListener('click', () => {
+      qtyValue.textContent = Number(qtyValue.textContent) + 1;
+      updateTotals();
+    });
+  
+    btnMinus.addEventListener('click', () => {
+      let qty = Number(qtyValue.textContent);
+      if (qty > 1) {
+        qtyValue.textContent = qty - 1;
+        updateTotals();
+      }
+    });
+  
+    btnRemove.addEventListener('click', () => {
+      document.querySelector('.checkout-item').remove();
+      document.querySelector('.checkout-summary').style.display = 'none';
+    });
+  
+    updateTotals();
+  </script>
+  
+</body>
