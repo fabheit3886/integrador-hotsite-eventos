@@ -8,43 +8,13 @@
 body{
   background:#212121;
 }
-
-.topo{
-  height:90px;
-  padding:16px 80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:-50px;
+main{
+  padding-top: 150px;
+  margin: 100px;
 }
-
-.logo-header{
-  height:60px;
+header{
+  padding: 10px;
 }
-
-.navegacao{
-  display:flex;
-  gap:36px;
-  font-weight:bolder;
-}
-
-.navegacao a{
-  color:white;
-  text-decoration:none;
-  font-size:18px;
-}
-
-.icones{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.icones img{
-  width:26px;
-  height:26px;
-}
-
 .pagina-ingressos{
   padding:20px 80px 60px;
 }
