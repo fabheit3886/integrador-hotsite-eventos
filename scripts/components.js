@@ -15,7 +15,6 @@ const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
-  // Header sólido após 80px
   if (currentScroll > 80) {
     header.classList.add("header--solid");
     header.classList.remove("header--transparent");
@@ -24,7 +23,6 @@ window.addEventListener("scroll", () => {
     header.classList.remove("header--solid");
   }
 
-  // Esconde ao descer
   if (currentScroll > lastScroll && currentScroll > 200) {
     header.classList.add("header--hidden");
   } else {
