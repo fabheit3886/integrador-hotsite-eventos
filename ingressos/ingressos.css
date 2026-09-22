@@ -1,315 +1,289 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background:#212121;
-}
-main{
-  padding-top: 150px;
-  margin: 100px;
-}
-header{
-  padding: 10px;
-}
-.pagina-ingressos{
-  padding:20px 80px 60px;
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding-top: 100px;
 }
 
-.chamada{
-  display:flex;
-  justify-content:center;
-  margin-top:80px;
-  margin-bottom:34px;
+.pagina-ingressos {
+  padding: 60px 40px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.chamada-box{
-  background:#810000;
-  border-radius:12px;
-  padding:12px 90px;
-  margin-top:4px;
-  margin-bottom:34px;
-  text-align:center;
+/* =========================
+   HEADER DA SEÇÃO
+========================= */
+.ingressos-header {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.chamada-titulo{
-  color:white;
-  font-weight:600;
-  font-size:24px;
+.badge-palco {
+  display: inline-block;
+  background-color: #BA2626;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
-.chamada-subtitulo{
-  color:white;
-  font-weight:600;
-  font-size:18px;
-  margin-top:4px;
+.ingressos-titulo {
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
-.ingressos{
-  display:flex;
-  justify-content:center;
+.ingressos-subtitulo {
+  font-size: 16px;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.ingressos-area{
-  width:min(1400px, 100%);
-  position:relative;
-  padding-top:60px;
+/* =========================
+   GRID 4 COLUNAS LADO A LADO
+========================= */
+.ingressos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
-.abas{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:34px;
-  padding:0 34px;
-  z-index:1;
+/* =========================
+   ESTILIZAÇÃO DO CARD
+========================= */
+.ticket-card {
+  background: #25282e;
+  border-radius: 24px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.aba{
-  justify-self:center;
-  width:520px;
-  max-width:100%;
-  text-align:center;
-  background:#BA2626;
-  color:white;
-  border-radius:8px;
-  padding:34px;
-  font-size:40px;
-  font-weight:600;
-  box-shadow:0 10px 25px rgba(0,0,0,.35);
+.ticket-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-.aba--oasis{
-  background:rgba(255,255,255,0.06);
-  color:rgba(255,255,255,0.22);
-  border:1px solid rgba(255,255,255,0.08);
-  box-shadow:none;
+/* Cores e Bordas dos Cards conforme Categoria */
+.ticket-card--pista {
+  background: linear-gradient(180deg, #380a0a 0%, #25282e 60%);
+  border-color: #BA2626;
 }
 
-.painel{
-  width:100%;
-  padding:42px;
-  border-radius:50px;
-  background:#2A2E33;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:34px;
-  position:relative;
-  z-index:2;
-  margin-top:30px;
+.ticket-card--conforto {
+  background: linear-gradient(180deg, #331515 0%, #25282e 60%);
+  border-color: #c63636;
 }
 
-.coluna{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
+.ticket-card--mezanino {
+  background: linear-gradient(180deg, #33210d 0%, #25282e 60%);
+  border-color: #d88921;
 }
 
-.card{
-  border-radius:60px;
-  padding:22px 24px 40px;
-  color:white;
-  min-height:320px;
-  display:flex;
-  flex-direction:column;
+.ticket-card--laterais {
+  background: linear-gradient(180deg, #2e2311 0%, #25282e 60%);
+  border-color: #f1ab4e;
 }
 
-.card-topo{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:10px;
-  margin-left:22px;
-  margin-right:70px;
-  padding-bottom:6px;
-  border-bottom:2px solid rgba(255,255,255,0.22);
+/* Destaque / Mais Vendido */
+.ticket-card.featured {
+  border-width: 2px;
+  box-shadow: 0 10px 30px rgba(186, 38, 38, 0.25);
 }
 
-.card-titulo{
-  padding-top:12px;
-  font-size:28px;
-  font-weight:700;
-  font-style:italic;
+.tag-destaque {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #BA2626;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
-.card-preco{
-  background:#E86060;
-  padding:12px 10px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:18px;
-  white-space:nowrap;
+/* Header do Card */
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.card-resumo{
-  margin-top:14px;
-  font-weight:600;
-  font-size:20px;
-  margin-left:22px;
-  margin-right:70px;
+.card-nome {
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  line-height: 1.2;
 }
 
-.card-texto{
-  margin-top:14px;
-  font-size:14px;
-  line-height:1.4;
-  color:rgba(255,255,255,.92);
-  margin-left:22px;
-  margin-right:70px;
+.card-tagline {
+  font-size: 12px;
+  color: #b0b0b0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-detalhes{
-  margin-top:14px;
-  margin-left:22px;
-  margin-right:70px;
-  margin-top:auto;
+/* Preço */
+.card-preco-box {
+  margin-top: 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
-.card-rotulo{
-  font-weight:700;
-  font-size:14px;
+.card-preco-box .currency {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f2b356;
+  margin-right: 2px;
 }
 
-.card-lista{
-  list-style:none;
-  margin-top:6px;
-  display:grid;
-  gap:6px;
-  font-size:14px;
+.card-preco-box .valor {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
 }
 
-.card-lista li::before{
-  content:"• ";
-  font-weight:900;
+.card-preco-box .cents {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.card--premium{ background:#810000; }
-.card--inferior{ background:#BA2626; }
-.card--superior{ background:#D88921; }
-.card--laterais{ background:#F1AB4E; }
+/* Corpo do Card */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
+.card-descricao {
+  font-size: 13px;
+  color: #cccccc;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
 
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
 
+.beneficios-titulo {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 12px;
+  display: block;
+}
 
-@media (max-width:980px){
-  .pagina-ingressos{ padding:20px 20px 60px; }
+.beneficios-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
 
-  .topo{
-    padding:14px 20px;
-    height:auto;
-    margin-bottom:0;
-    flex-wrap:wrap;
-    gap:12px;
+.beneficios-lista li {
+  font-size: 12px;
+  color: #b8b8b8;
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.3;
+}
+
+.beneficios-lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #f2b356;
+  font-weight: bold;
+}
+
+/* Botão do Card */
+.card-footer {
+  margin-top: auto;
+}
+
+.btn-comprar {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  text-align: center;
+  background-color: #f2b356;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ticket-card--pista .btn-comprar {
+  background-color: #BA2626;
+  color: #ffffff;
+}
+
+.btn-comprar:hover {
+  filter: brightness(1.15);
+  transform: scale(1.02);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 1200px) {
+  .ingressos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pagina-ingressos {
+    padding: 40px 16px 60px;
   }
 
-  .logo-header{ height:48px; }
-
-  .navegacao{
-    gap:14px;
-    flex-wrap:wrap;
-    justify-content:center;
-    width:100%;
-  }
-  .navegacao a{ font-size:16px; }
-
-  .icones{ margin-left:auto; }
-
-  .chamada{ margin-top:44px; margin-bottom:20px; }
-  .chamada-box{ padding:12px 22px; }
-  .chamada-titulo{ font-size:20px; }
-  .chamada-subtitulo{ font-size:15px; }
-
-  .abas{
-    position:static;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    padding:0;
-    margin-bottom:14px;
-  }
-  .aba{
-    width:100%;
-    font-size:22px;
-    padding:14px;
+  .ingressos-titulo {
+    font-size: 28px;
   }
 
-  .ingressos-area{ padding-top:0; }
-  .painel{
-    margin-top:0;
-    grid-template-columns:1fr;
-    padding:20px;
-    gap:14px;
-    border-radius:24px;
+  .ingressos-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-
-  .card{
-    min-height:auto;
-    border-radius:26px;
-    padding:18px 16px 24px;
-  }
-
-  .card-topo{
-    margin-left:0;
-    margin-right:0;
-    padding-bottom:8px;
-  }
-  .card-resumo,
-  .card-texto,
-  .card-detalhes{
-    margin-left:0;
-    margin-right:0;
-  }
-
-  .card-titulo{ font-size:20px; }
-  .card-preco{ font-size:13px; padding:10px; }
-  .card-resumo{ font-size:15px; }
-  .card-texto{ font-size:12px; }
-  .card-lista{ font-size:12px; }
-}
-
-@media (max-width:520px){
-  .pagina-ingressos{ padding:16px 14px 48px; }
-  .topo{
-    padding:12px 14px;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-  }
-  .icones{ margin-left:0; }
-  .icones img{ width:22px; height:22px; }
-  .navegacao{ gap:10px; }
-  .navegacao a{ font-size:14px; }
-  .chamada{ margin-top:28px; }
-  .chamada-box{ padding:10px 14px; border-radius:10px; }
-  .chamada-titulo{ font-size:18px; }
-  .chamada-subtitulo{ font-size:13px; }
-  .aba{
-    font-size:18px;
-    padding:12px;
-  }
-  .painel{
-    padding:14px;
-    border-radius:18px;
-    gap:12px;
-  }
-  .card{
-    border-radius:20px;
-    padding:14px 12px 18px;
-  }
-  .card-topo{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:8px;
-  }
-  .card-titulo{ font-size:18px; }
-  .card-preco{ font-size:12px; padding:8px 10px; }
-  .card-resumo{ font-size:14px; }
-  .card-texto{ font-size:11px; }
-  .card-lista{ font-size:11px; }
 }
